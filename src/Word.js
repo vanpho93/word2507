@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 export default class Word extends Component {
     render() {
-        const { wordInfo } = this.props;
+        const { wordInfo, onDelete } = this.props;
         return (
             <div className="word">
                 <div className="word-container">
@@ -15,6 +15,7 @@ export default class Word extends Component {
                     </button>
                     <button
                         className="btn btn-warning"
+                        onClick={() => onDelete(wordInfo.id)}
                     >
                         Remove
                     </button>

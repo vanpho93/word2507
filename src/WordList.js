@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import Word from './Word';
 
 export default class WordList extends Component {
+    onDelete = (id) => {
+        this.setState(prevState => ({ words: prevState.words.filter(w => w.id !== id) }));
+    }
+
     state = {
         words: [
             { id: 'ab123', en: 'One', vn: 'Mot', isMemorized: true },
@@ -10,9 +14,11 @@ export default class WordList extends Component {
             { id: 'ab126', en: 'Four', vn: 'Bon', isMemorized: true },
         ]
     }
+
     genListWord() {
         return this.state.words.map(word => (
             <Word
+                onDelete={this.onDelete}
                 wordInfo={word}
                 key={word.id}
             />
