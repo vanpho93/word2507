@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Word from './Word';
+import WordForm from './WordForm';
 
 class WordList extends Component {
     genListWord() {
@@ -15,6 +16,7 @@ class WordList extends Component {
     render() {
         return (
             <div>
+                <WordForm />
                 { this.genListWord() }
             </div>
         );
