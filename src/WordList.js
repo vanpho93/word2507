@@ -8,7 +8,7 @@ class WordList extends Component {
         return this.props.words.map(word => (
             <Word
                 wordInfo={word}
-                key={word.id}
+                key={word._id}
             />
         ));
     }

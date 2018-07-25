@@ -9,9 +9,8 @@ class WordForm extends Component {
     }
 
     addWord = () => {
-        const { addWord } = this.props;
         const { txtEn, txtVn } = this.state;
-        addWord(txtEn, txtVn);
+        this.props.addWord(txtEn, txtVn);
         this.setState({ txtEn: '', txtVn: '' });
     }
 
