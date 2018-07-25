@@ -15,8 +15,6 @@ export default class WordList extends Component {
             <Word
                 wordInfo={word}
                 key={word.id}
-                onRemoveWord={this.onRemoveWord}
-                onToggleWord={this.onToggleWord}
             />
         ));
     }
